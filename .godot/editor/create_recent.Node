@@ -1,3 +1,6 @@
+RayCast2D
+GPUParticles2D
+CPUParticles2D
 PinJoint2D
 GrooveJoint2D
 DampedSpringJoint2D

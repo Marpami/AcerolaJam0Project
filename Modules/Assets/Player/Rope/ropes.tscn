@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://oj51pl4ir56h"]
+
+[ext_resource type="PackedScene" uid="uid://cw2xdrxjbyn6g" path="res://Modules/Assets/Player/Rope/rope.tscn" id="1_i5ep7"]
+
+[node name="Ropes" type="Node2D"]
+
+[node name="FirstPin" type="PinJoint2D" parent="."]
+position = Vector2(0, 8)
+node_b = NodePath("../Rope")
+softness = 4.0
+
+[node name="Rope" parent="." instance=ExtResource("1_i5ep7")]
+position = Vector2(0, 9)
+
+[node name="SecondPin" type="PinJoint2D" parent="."]
+position = Vector2(0, 12)
+node_a = NodePath("../Rope")
+node_b = NodePath("../Rope3")
+softness = 4.0
+
+[node name="Rope3" parent="." instance=ExtResource("1_i5ep7")]
+position = Vector2(0, 13)
+
+[node name="ThirdPin" type="PinJoint2D" parent="."]
+position = Vector2(0, 16)
+node_a = NodePath("../Rope3")
+node_b = NodePath("../Rope5")
+disable_collision = false
+softness = 4.0
+
+[node name="Rope5" parent="." instance=ExtResource("1_i5ep7")]
+position = Vector2(0, 17)
+
+[node name="FourthPin" type="PinJoint2D" parent="."]
+position = Vector2(0, 20)
+node_a = NodePath("../Rope5")
+softness = 4.0

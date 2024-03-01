@@ -1,4 +1,5 @@
+res://Scripts/GlobalScripts
+res://Modules/Assets/Player/Rope
 res://Modules/Assets/Player/BalloonController
 res://Modules/Assets/Player/Dog
-res://Modules/Assets/Player/Rope
 res://Scenes/MainScene

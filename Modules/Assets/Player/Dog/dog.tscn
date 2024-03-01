@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dblu1q02jwi25"]
+[gd_scene load_steps=6 format=3 uid="uid://dblu1q02jwi25"]
 
 [ext_resource type="Texture2D" uid="uid://yhy1i4kgde1u" path="res://Modules/Assets/testArt/DogTest.png" id="1_jk2s1"]
 [ext_resource type="Script" path="res://Modules/Assets/Player/Dog/dog.gd" id="1_r67ek"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_romhi"]
+friction = 0.9
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ji5p2"]
 animations = [{
@@ -14,10 +17,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lb460"]
-size = Vector2(16, 8)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eqshp"]
+radius = 4.0
+height = 12.0
 
 [node name="Dog" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_romhi")
 gravity_scale = 0.1
 center_of_mass_mode = 1
 center_of_mass = Vector2(-1, 0)
@@ -29,5 +34,9 @@ sprite_frames = SubResource("SpriteFrames_ji5p2")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 4)
-shape = SubResource("RectangleShape2D_lb460")
+position = Vector2(-1, 4)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_eqshp")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, 10)

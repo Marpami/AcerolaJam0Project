@@ -1,7 +1,8 @@
-res://Modules/Assets/Player/BalloonController/balloon_controller.tscn
 res://Scenes/MainScene/main_scene.tscn
-res://Modules/Assets/Player/Balloon/balloon.tscn
 res://Modules/Assets/Player/Rope/rope.tscn
 res://Modules/Assets/Player/Dog/dog.tscn
+res://Modules/Assets/Player/BalloonController/balloon_controller.tscn
 res://Modules/Assets/Player/BalloonController/balloon_controller.gd
+res://Modules/Assets/Player/Rope/ropes.tscn
 res://Modules/Assets/Player/Dog/dog.gd
+res://Scripts/GlobalScripts/GlobalVar.gd
