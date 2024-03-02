@@ -7,7 +7,7 @@
 [node name="FirstPin" type="PinJoint2D" parent="."]
 position = Vector2(0, 8)
 node_b = NodePath("../Rope")
-softness = 4.0
+softness = 3.0
 
 [node name="Rope" parent="." instance=ExtResource("1_i5ep7")]
 position = Vector2(0, 9)
@@ -16,7 +16,7 @@ position = Vector2(0, 9)
 position = Vector2(0, 12)
 node_a = NodePath("../Rope")
 node_b = NodePath("../Rope3")
-softness = 4.0
+softness = 3.0
 
 [node name="Rope3" parent="." instance=ExtResource("1_i5ep7")]
 position = Vector2(0, 13)
@@ -26,7 +26,7 @@ position = Vector2(0, 16)
 node_a = NodePath("../Rope3")
 node_b = NodePath("../Rope5")
 disable_collision = false
-softness = 4.0
+softness = 3.0
 
 [node name="Rope5" parent="." instance=ExtResource("1_i5ep7")]
 position = Vector2(0, 17)
@@ -34,4 +34,4 @@ position = Vector2(0, 17)
 [node name="FourthPin" type="PinJoint2D" parent="."]
 position = Vector2(0, 20)
 node_a = NodePath("../Rope5")
-softness = 4.0
+softness = 3.0
