@@ -1,7 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://dblu1q02jwi25"]
+[gd_scene load_steps=16 format=3 uid="uid://dblu1q02jwi25"]
 
-[ext_resource type="Texture2D" uid="uid://yhy1i4kgde1u" path="res://Modules/Assets/testArt/DogTest.png" id="1_jk2s1"]
 [ext_resource type="Script" path="res://Modules/Assets/Player/Dog/dog.gd" id="1_r67ek"]
+[ext_resource type="Texture2D" uid="uid://cpyw88hj7t2nt" path="res://Modules/Assets/Art/Player/Down/DogDown.png" id="2_64sxi"]
+[ext_resource type="Texture2D" uid="uid://lqd4bugkiurp" path="res://Modules/Assets/Art/Player/Fall/DogDeath.png" id="2_dnr2w"]
+[ext_resource type="Texture2D" uid="uid://cprst8r4ty771" path="res://Modules/Assets/Art/Player/Idle/DogBalloonDog_1.png" id="2_pieiw"]
+[ext_resource type="Texture2D" uid="uid://dxmrdbilhtb8s" path="res://Modules/Assets/Art/Player/Idle/DogBalloonDog_2.png" id="3_35k51"]
+[ext_resource type="Texture2D" uid="uid://doj34fx5t1qkw" path="res://Modules/Assets/Art/Player/Fall/DogFall_1.png" id="3_pqmif"]
+[ext_resource type="Texture2D" uid="uid://bwcrll43c5wv1" path="res://Modules/Assets/Art/Player/Idle/DogBalloonDog_3.png" id="4_iql2s"]
+[ext_resource type="Texture2D" uid="uid://b38qbka48whd0" path="res://Modules/Assets/Art/Player/Fall/DogFall_2.png" id="4_nfn28"]
+[ext_resource type="Texture2D" uid="uid://dpp5o30d3jcy8" path="res://Modules/Assets/Art/Player/Idle/DogBalloonDog_4.png" id="5_yc55p"]
+[ext_resource type="Texture2D" uid="uid://6fh68ttfybh1" path="res://Modules/Assets/Art/Player/MoveSideway/DogMove_2.png" id="7_ifsuj"]
+[ext_resource type="Texture2D" uid="uid://vgsrlmrayb3d" path="res://Modules/Assets/Art/Player/MoveSideway/DogMove_3.png" id="8_c1tww"]
+[ext_resource type="Texture2D" uid="uid://dj0g27ban1f00" path="res://Modules/Assets/Art/Player/MoveSideway/DogMove_1.png" id="9_srdb5"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_romhi"]
 friction = 0.9
@@ -10,11 +20,66 @@ friction = 0.9
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_jk2s1")
+"texture": ExtResource("2_dnr2w")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_64sxi")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_pqmif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nfn28")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pieiw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_35k51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_iql2s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_yc55p")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_ifsuj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_c1tww")
+}],
+"loop": true,
+"name": &"move",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_srdb5")
+}],
+"loop": true,
+"name": &"move_counter",
+"speed": 3.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eqshp"]
@@ -27,13 +92,18 @@ gravity_scale = 0.1
 center_of_mass_mode = 1
 center_of_mass = Vector2(-1, 0)
 lock_rotation = true
+max_contacts_reported = 1
+contact_monitor = true
 script = ExtResource("1_r67ek")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ji5p2")
-animation = &"idle"
+animation = &"death"
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 4)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_eqshp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
