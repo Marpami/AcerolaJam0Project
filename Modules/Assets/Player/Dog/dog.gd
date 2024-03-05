@@ -18,6 +18,9 @@ const right_speed : int = 55
 
 var death_anim : bool = false
 
+const spike_name = "SpikeMap"
+
+
 
 func _process(delta):
 	# Checks when player is not flying aka balloon pops
@@ -70,6 +73,9 @@ func _input(event):
 func movement_timer():
 	await get_tree().create_timer(wait_time_move).timeout
 	waiting = false
+	# Don't do idle if the dog is not flying anymore
+	if GlobalVar.is_dog_flying == false:
+		return
 	anim.play("idle")
 
 
@@ -77,7 +83,17 @@ func movement_timer():
 
 
 func _on_body_entered(body):
+	# If the body we hit is spike then player plays death animation
+	if body.name == spike_name:
+		print("Death by spikes")
+		GlobalVar.is_dog_flying = false
+		GlobalVar.is_dead = true
+		anim.play("death")
+	
+	# If the dog is not flying and hits the ground play death animation
 	if GlobalVar.is_dog_flying == false:
 		GlobalVar.is_dead = true
 		anim.play("death")
-		
+
+
+

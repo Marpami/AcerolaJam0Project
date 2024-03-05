@@ -2,10 +2,5 @@ res://Scenes/MainScene/main_scene.tscn
 res://Modules/Assets/Player/Rope/rope.tscn
 res://Modules/Assets/Player/Dog/dog.tscn
 res://Modules/Assets/Player/BalloonController/balloon_controller.tscn
-res://Modules/Assets/Player/Rope/ropes.tscn
-res://Scenes/MainScene/main_scene.gd
 res://Scenes/MainMenu/main_menu.tscn
-res://Scenes/MainMenu/main_menu.gd
-res://Scripts/GlobalScripts/GlobalVar.gd
 res://Modules/Assets/Player/Dog/dog.gd
-res://Scenes/MainScene/PauseMarginContainer.gd
