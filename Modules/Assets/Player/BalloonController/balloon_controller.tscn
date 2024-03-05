@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ciklnbtx8atrd"]
 
-[ext_resource type="Texture2D" uid="uid://eqqgwt3fhgj8" path="res://Modules/Assets/testArt/Balloon.png" id="1_y6l3n"]
 [ext_resource type="Script" path="res://Modules/Assets/Player/BalloonController/balloon_controller.gd" id="1_yiweq"]
+[ext_resource type="Texture2D" uid="uid://cxp1er4d3mfkn" path="res://Modules/Assets/Art/Other/Balloon/Balloon.png" id="2_kmruv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f0myj"]
 radius = 6.0
@@ -15,7 +15,7 @@ contact_monitor = true
 script = ExtResource("1_yiweq")
 
 [node name="BalloonSprite" type="Sprite2D" parent="."]
-texture = ExtResource("1_y6l3n")
+texture = ExtResource("2_kmruv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_f0myj")

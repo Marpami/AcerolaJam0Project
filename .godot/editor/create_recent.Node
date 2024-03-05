@@ -1,3 +1,4 @@
+AnimatedSprite2D
 TileMap
 Panel
 CenterContainer
@@ -11,5 +12,3 @@ MarginContainer
 Button
 VSeparator
 Container
-Control
-CanvasLayer

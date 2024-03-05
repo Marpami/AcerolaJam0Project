@@ -1,7 +1,35 @@
-[gd_scene load_steps=12 format=3 uid="uid://bk71py2ijg52j"]
+[gd_scene load_steps=26 format=3 uid="uid://bk71py2ijg52j"]
 
 [ext_resource type="Script" path="res://Scenes/MainMenu/main_menu.gd" id="1_ntk2t"]
-[ext_resource type="Texture2D" uid="uid://ba1hdndsq8wp1" path="res://Modules/Assets/testArt/DogBalloonMainMenuScene_scaled_3x.png" id="2_fukpt"]
+[ext_resource type="Texture2D" uid="uid://cucxbf73ulsm1" path="res://Modules/Assets/Art/Menu/DogBalloonMainMenuScene.png" id="2_mwrw3"]
+[ext_resource type="Texture2D" uid="uid://cprst8r4ty771" path="res://Modules/Assets/Art/Player/Idle/DogBalloonDog_1.png" id="3_7g2hg"]
+[ext_resource type="Texture2D" uid="uid://dxmrdbilhtb8s" path="res://Modules/Assets/Art/Player/Idle/DogBalloonDog_2.png" id="4_2smqy"]
+[ext_resource type="Texture2D" uid="uid://bwcrll43c5wv1" path="res://Modules/Assets/Art/Player/Idle/DogBalloonDog_3.png" id="5_ypqap"]
+[ext_resource type="Texture2D" uid="uid://dpp5o30d3jcy8" path="res://Modules/Assets/Art/Player/Idle/DogBalloonDog_4.png" id="6_4e50k"]
+[ext_resource type="Texture2D" uid="uid://epvb1fr1gyba" path="res://Modules/Assets/Art/Menu/Anim/DogBalloonMainMenuScene_1.png" id="7_oes1r"]
+[ext_resource type="Texture2D" uid="uid://bbhxpaum4gwj2" path="res://Modules/Assets/Art/Menu/Anim/DogBalloonMainMenuScene_2.png" id="8_ldcrg"]
+[ext_resource type="Texture2D" uid="uid://nkh3msvywxu7" path="res://Modules/Assets/Art/Menu/Anim/DogBalloonMainMenuScene_3.png" id="9_vh844"]
+[ext_resource type="Texture2D" uid="uid://dtn3endr72rpn" path="res://Modules/Assets/Art/Other/BalloonAnim/BallonAnim_1.png" id="10_n815c"]
+[ext_resource type="Texture2D" uid="uid://dg0phiq2qeh5t" path="res://Modules/Assets/Art/Other/BalloonAnim/BallonAnim_2.png" id="11_5macy"]
+[ext_resource type="Texture2D" uid="uid://dw4q2g4jp4du" path="res://Modules/Assets/Art/Other/BalloonAnim/BallonAnim_3.png" id="12_p8itk"]
+[ext_resource type="Texture2D" uid="uid://b1qtqcf56m0ew" path="res://Modules/Assets/Art/Other/BalloonAnim/BallonAnim_4.png" id="13_jneud"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_plgur"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_oes1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ldcrg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vh844")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5yiqy"]
 
@@ -57,6 +85,46 @@ expand_margin_top = 2.0
 expand_margin_right = 10.0
 expand_margin_bottom = 2.0
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_fdajy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_n815c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5macy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_p8itk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jneud")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_muwqg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_7g2hg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2smqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ypqap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4e50k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -67,8 +135,16 @@ grow_vertical = 2
 script = ExtResource("1_ntk2t")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(240, 135)
-texture = ExtResource("2_fukpt")
+visible = false
+position = Vector2(273, 140)
+scale = Vector2(4.11944, 4.11944)
+texture = ExtResource("2_mwrw3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(306, 140)
+scale = Vector2(4.28889, 4.28889)
+sprite_frames = SubResource("SpriteFrames_plgur")
+autoplay = "default"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -133,6 +209,19 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_07uxm")
 theme_override_styles/hover = SubResource("StyleBoxFlat_fqa0a")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_gfxfa")
 text = "Exit"
+
+[node name="BallonSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(231, 210)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_fdajy")
+autoplay = "default"
+
+[node name="DogSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(230, 216)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_muwqg")
+autoplay = "default"
+flip_h = true
 
 [connection signal="button_down" from="MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_button_down"]
 [connection signal="button_down" from="MarginContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_button_down"]
