@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GlobalVar="*res://Scripts/GlobalScripts/GlobalVar.gd"
+AudioPlayer="*res://Scenes/Global/music/audio_player.tscn"
 
 [display]
 

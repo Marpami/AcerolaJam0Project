@@ -1,7 +1,10 @@
 extends Node2D
 
 @onready var game_over_screen = $CanvasLayer/GameOverContainer
+@onready var victory_screen = $CanvasLayer/VictoryContainer
 @onready var timer_label = $CanvasLayer/TimerContainer/TimerLabel
+@onready var timer_victory_label = $CanvasLayer/VictoryContainer/Margin/VBoxContainer/VictoryTimeLabel
+
 
 
 var game_over : bool = false
@@ -17,8 +20,11 @@ var s_ms
 
 
 func _ready():
+	victory_screen.visible = false
 	# Game starts by being paused, so player has the time to get ready
 	get_tree().paused = true
+	# Start the music
+	AudioPlayer.play_music_level()
 	game_over = false
 	GlobalVar.is_dog_flying = true
 	GlobalVar.is_dead = false
@@ -43,6 +49,7 @@ func _process(_delta):
 	
 	var the_time = time()
 	timer_label.text = the_time
+	timer_victory_label.text = "Time: " + the_time
 
 
 
@@ -87,4 +94,23 @@ func _on_play_again_button_button_down():
 
 
 func _on_main_menu_button_button_down():
+	get_tree().change_scene_to_file("res://Scenes/MainMenu/main_menu.tscn")
+
+
+# Body entered area
+func _on_victory_area_body_entered(body):
+	# If balloon has popped then you cannot win
+	if GlobalVar.is_dog_flying == false:
+		return
+	if body.name == "Dog":
+		print("Victory")
+		victory_screen.visible = true
+		get_tree().paused = true
+
+# more Buttons
+func _on_play_button_button_down():
+	get_tree().reload_current_scene()
+
+
+func _on_menu_button_button_down():
 	get_tree().change_scene_to_file("res://Scenes/MainMenu/main_menu.tscn")

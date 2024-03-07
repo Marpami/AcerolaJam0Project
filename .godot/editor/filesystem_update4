@@ -3,3 +3,12 @@ res://Modules/Assets/Player/Rope/rope.tscn
 res://Modules/Assets/Player/Dog/dog.tscn
 res://Modules/Assets/Player/BalloonController/balloon_controller.tscn
 res://Scenes/MainMenu/main_menu.tscn
+res://Scenes/Global/music/audio_player.tscn
+res://Scenes/Global/music/audio_player.gd
+res://Scenes/MainScene/main_scene.gd
+res://Scenes/MainMenu/main_menu.gd
+res://Scenes/Slider/volume_slider.tscn
+res://Scenes/Slider/volume_slider.gd
+res://Scenes/MainScene/SfxPlayer.gd
+res://Modules/Assets/Player/Dog/dog.gd
+res://Scripts/GlobalScripts/GlobalVar.gd

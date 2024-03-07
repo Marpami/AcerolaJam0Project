@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bk71py2ijg52j"]
+[gd_scene load_steps=31 format=3 uid="uid://bk71py2ijg52j"]
 
 [ext_resource type="Script" path="res://Scenes/MainMenu/main_menu.gd" id="1_ntk2t"]
 [ext_resource type="Texture2D" uid="uid://cucxbf73ulsm1" path="res://Modules/Assets/Art/Menu/DogBalloonMainMenuScene.png" id="2_mwrw3"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dg0phiq2qeh5t" path="res://Modules/Assets/Art/Other/BalloonAnim/BallonAnim_2.png" id="11_5macy"]
 [ext_resource type="Texture2D" uid="uid://dw4q2g4jp4du" path="res://Modules/Assets/Art/Other/BalloonAnim/BallonAnim_3.png" id="12_p8itk"]
 [ext_resource type="Texture2D" uid="uid://b1qtqcf56m0ew" path="res://Modules/Assets/Art/Other/BalloonAnim/BallonAnim_4.png" id="13_jneud"]
+[ext_resource type="PackedScene" uid="uid://dsh50qsil0dbi" path="res://Scenes/Slider/volume_slider.tscn" id="14_3lb8m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_plgur"]
 animations = [{
@@ -30,60 +31,6 @@ animations = [{
 "name": &"default",
 "speed": 3.0
 }]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5yiqy"]
-
-[sub_resource type="SystemFont" id="SystemFont_5yr6k"]
-font_names = PackedStringArray("Silkscreen")
-
-[sub_resource type="Theme" id="Theme_v6u2g"]
-default_font = SubResource("SystemFont_5yr6k")
-default_font_size = 24
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbhx6"]
-bg_color = Color(0.952941, 0.92549, 0.831373, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_color = Color(0.615686, 0.556863, 0.368627, 1)
-
-[sub_resource type="SystemFont" id="SystemFont_bg3l1"]
-font_names = PackedStringArray("Ink Free")
-
-[sub_resource type="Theme" id="Theme_3eevr"]
-default_font = SubResource("SystemFont_bg3l1")
-default_font_size = 22
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_07uxm"]
-bg_color = Color(0.615686, 0.556863, 0.368627, 1)
-border_width_left = 7
-border_color = Color(0.192157, 0.45098, 0.4, 1)
-corner_radius_top_right = 6
-expand_margin_left = 5.0
-expand_margin_top = 2.0
-expand_margin_right = 5.0
-expand_margin_bottom = 2.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fqa0a"]
-bg_color = Color(0.615686, 0.556863, 0.368627, 1)
-border_width_left = 14
-border_color = Color(0.439216, 0.192157, 0.45098, 1)
-corner_radius_top_right = 6
-expand_margin_left = 5.0
-expand_margin_top = 2.0
-expand_margin_right = 10.0
-expand_margin_bottom = 2.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gfxfa"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 14
-corner_radius_top_right = 6
-corner_radius_bottom_left = 2
-expand_margin_left = 5.0
-expand_margin_top = 2.0
-expand_margin_right = 10.0
-expand_margin_bottom = 2.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fdajy"]
 animations = [{
@@ -125,6 +72,71 @@ animations = [{
 "speed": 3.0
 }]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5yiqy"]
+
+[sub_resource type="SystemFont" id="SystemFont_5yr6k"]
+font_names = PackedStringArray("Silkscreen")
+
+[sub_resource type="Theme" id="Theme_v6u2g"]
+default_font = SubResource("SystemFont_5yr6k")
+default_font_size = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbhx6"]
+bg_color = Color(0.952941, 0.92549, 0.831373, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.615686, 0.556863, 0.368627, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_os58q"]
+font_names = PackedStringArray("Ink Free")
+
+[sub_resource type="Theme" id="Theme_3eevr"]
+default_font = SubResource("SystemFont_os58q")
+default_font_size = 22
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_07uxm"]
+bg_color = Color(0.615686, 0.556863, 0.368627, 1)
+border_width_left = 7
+border_color = Color(0.192157, 0.45098, 0.4, 1)
+corner_radius_top_right = 6
+expand_margin_left = 5.0
+expand_margin_top = 2.0
+expand_margin_right = 5.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fqa0a"]
+bg_color = Color(0.615686, 0.556863, 0.368627, 1)
+border_width_left = 14
+border_color = Color(0.439216, 0.192157, 0.45098, 1)
+corner_radius_top_right = 6
+expand_margin_left = 5.0
+expand_margin_top = 2.0
+expand_margin_right = 10.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gfxfa"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 14
+corner_radius_top_right = 6
+corner_radius_bottom_left = 2
+expand_margin_left = 5.0
+expand_margin_top = 2.0
+expand_margin_right = 10.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xhaup"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6bj81"]
+
+[sub_resource type="SystemFont" id="SystemFont_m2wgf"]
+font_names = PackedStringArray("Ink Free")
+
+[sub_resource type="Theme" id="Theme_7ggfm"]
+default_font = SubResource("SystemFont_m2wgf")
+default_font_size = 24
+
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -146,70 +158,6 @@ scale = Vector2(4.28889, 4.28889)
 sprite_frames = SubResource("SpriteFrames_plgur")
 autoplay = "default"
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_right = 210
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 8
-
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 15
-theme_override_styles/separator = SubResource("StyleBoxEmpty_5yiqy")
-
-[node name="GameName" type="Label" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme = SubResource("Theme_v6u2g")
-theme_type_variation = &"HeaderLarge"
-theme_override_colors/font_color = Color(0.952941, 0.92549, 0.831373, 1)
-theme_override_colors/font_outline_color = Color(0.615686, 0.556863, 0.368627, 1)
-theme_override_constants/outline_size = 10
-theme_override_styles/normal = SubResource("StyleBoxFlat_tbhx6")
-text = "Game Name Here"
-
-[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 30
-theme_override_styles/separator = SubResource("StyleBoxEmpty_5yiqy")
-
-[node name="PlayButton" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 4
-theme = SubResource("Theme_3eevr")
-theme_override_styles/normal = SubResource("StyleBoxFlat_07uxm")
-theme_override_styles/hover = SubResource("StyleBoxFlat_fqa0a")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_gfxfa")
-text = "Play"
-
-[node name="SettingsButton" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 4
-theme = SubResource("Theme_3eevr")
-theme_override_styles/normal = SubResource("StyleBoxFlat_07uxm")
-theme_override_styles/hover = SubResource("StyleBoxFlat_fqa0a")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_gfxfa")
-text = "Settings"
-
-[node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 4
-theme = SubResource("Theme_3eevr")
-theme_override_styles/normal = SubResource("StyleBoxFlat_07uxm")
-theme_override_styles/hover = SubResource("StyleBoxFlat_fqa0a")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_gfxfa")
-text = "Exit"
-
 [node name="BallonSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(231, 210)
 scale = Vector2(3, 3)
@@ -223,6 +171,131 @@ sprite_frames = SubResource("SpriteFrames_muwqg")
 autoplay = "default"
 flip_h = true
 
-[connection signal="button_down" from="MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_button_down"]
-[connection signal="button_down" from="MarginContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_button_down"]
-[connection signal="button_down" from="MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_button_down"]
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 210
+
+[node name="Menu" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/Menu"]
+layout_mode = 2
+theme_override_constants/separation = 15
+theme_override_styles/separator = SubResource("StyleBoxEmpty_5yiqy")
+
+[node name="GameName" type="Label" parent="MarginContainer/Menu"]
+layout_mode = 2
+theme = SubResource("Theme_v6u2g")
+theme_type_variation = &"HeaderLarge"
+theme_override_colors/font_color = Color(0.952941, 0.92549, 0.831373, 1)
+theme_override_colors/font_outline_color = Color(0.615686, 0.556863, 0.368627, 1)
+theme_override_constants/outline_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_tbhx6")
+text = "Balloon Dog"
+horizontal_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/Menu"]
+layout_mode = 2
+theme_override_constants/separation = 30
+theme_override_styles/separator = SubResource("StyleBoxEmpty_5yiqy")
+
+[node name="PlayButton" type="Button" parent="MarginContainer/Menu"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme = SubResource("Theme_3eevr")
+theme_override_styles/normal = SubResource("StyleBoxFlat_07uxm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fqa0a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gfxfa")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xhaup")
+text = "Play"
+
+[node name="SettingsButton" type="Button" parent="MarginContainer/Menu"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme = SubResource("Theme_3eevr")
+theme_override_styles/normal = SubResource("StyleBoxFlat_07uxm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fqa0a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gfxfa")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xhaup")
+text = "Settings"
+
+[node name="ExitButton" type="Button" parent="MarginContainer/Menu"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme = SubResource("Theme_3eevr")
+theme_override_styles/normal = SubResource("StyleBoxFlat_07uxm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fqa0a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gfxfa")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xhaup")
+text = "Exit"
+
+[node name="Settings" type="VBoxContainer" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/Settings"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_6bj81")
+
+[node name="Master" type="Label" parent="MarginContainer/Settings"]
+layout_mode = 2
+theme = SubResource("Theme_7ggfm")
+theme_override_colors/font_color = Color(0.615686, 0.556863, 0.368627, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 32
+text = "Sound Settings"
+
+[node name="Master2" type="Label" parent="MarginContainer/Settings"]
+layout_mode = 2
+theme = SubResource("Theme_7ggfm")
+text = "Master"
+
+[node name="volume_slider" parent="MarginContainer/Settings" instance=ExtResource("14_3lb8m")]
+layout_mode = 2
+bus_name = "Master"
+
+[node name="Music" type="Label" parent="MarginContainer/Settings"]
+layout_mode = 2
+theme = SubResource("Theme_7ggfm")
+text = "Music"
+
+[node name="volume_slider2" parent="MarginContainer/Settings" instance=ExtResource("14_3lb8m")]
+layout_mode = 2
+bus_name = "Music"
+
+[node name="Sfx" type="Label" parent="MarginContainer/Settings"]
+layout_mode = 2
+theme = SubResource("Theme_7ggfm")
+text = "Sound Effects"
+
+[node name="volume_slider3" parent="MarginContainer/Settings" instance=ExtResource("14_3lb8m")]
+layout_mode = 2
+bus_name = "Sfx"
+
+[node name="BackButton" type="Button" parent="MarginContainer/Settings"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme = SubResource("Theme_3eevr")
+theme_override_styles/normal = SubResource("StyleBoxFlat_07uxm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fqa0a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gfxfa")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xhaup")
+text = "Back"
+
+[connection signal="button_down" from="MarginContainer/Menu/PlayButton" to="." method="_on_play_button_button_down"]
+[connection signal="button_down" from="MarginContainer/Menu/SettingsButton" to="." method="_on_settings_button_button_down"]
+[connection signal="button_down" from="MarginContainer/Menu/ExitButton" to="." method="_on_exit_button_button_down"]
+[connection signal="button_down" from="MarginContainer/Settings/BackButton" to="." method="_on_back_button_button_down"]
