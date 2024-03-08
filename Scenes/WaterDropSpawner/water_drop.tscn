@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkfi87pwf2n6c"]
+
+[ext_resource type="Script" path="res://Scenes/WaterDropSpawner/water_drop.gd" id="1_2snrc"]
+[ext_resource type="Texture2D" uid="uid://csa6218wag6j7" path="res://Modules/Assets/Art/Other/Water/WaterDrop.png" id="1_13uum"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_g4gvi"]
+b = Vector2(0, 2)
+
+[node name="WaterDrop" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 4
+gravity_scale = 0.1
+max_contacts_reported = 1
+contact_monitor = true
+script = ExtResource("1_2snrc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_13uum")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_g4gvi")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

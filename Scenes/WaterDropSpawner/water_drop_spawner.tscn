@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvcjy74pyyngt"]
+
+[ext_resource type="Script" path="res://Scenes/WaterDropSpawner/water_drop_spawner.gd" id="1_t8eds"]
+
+[node name="WaterDropSpawner" type="Node2D"]
+process_mode = 1
+script = ExtResource("1_t8eds")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+
+[connection signal="screen_entered" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]

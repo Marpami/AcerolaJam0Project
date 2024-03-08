@@ -198,7 +198,7 @@ theme_override_colors/font_color = Color(0.952941, 0.92549, 0.831373, 1)
 theme_override_colors/font_outline_color = Color(0.615686, 0.556863, 0.368627, 1)
 theme_override_constants/outline_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_tbhx6")
-text = "Balloon Dog"
+text = "Baldo"
 horizontal_alignment = 1
 
 [node name="HSeparator2" type="HSeparator" parent="MarginContainer/Menu"]
