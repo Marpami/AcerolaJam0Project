@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bk71py2ijg52j"]
+[gd_scene load_steps=32 format=3 uid="uid://bk71py2ijg52j"]
 
 [ext_resource type="Script" path="res://Scenes/MainMenu/main_menu.gd" id="1_ntk2t"]
 [ext_resource type="Texture2D" uid="uid://cucxbf73ulsm1" path="res://Modules/Assets/Art/Menu/DogBalloonMainMenuScene.png" id="2_mwrw3"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dw4q2g4jp4du" path="res://Modules/Assets/Art/Other/BalloonAnim/BallonAnim_3.png" id="12_p8itk"]
 [ext_resource type="Texture2D" uid="uid://b1qtqcf56m0ew" path="res://Modules/Assets/Art/Other/BalloonAnim/BallonAnim_4.png" id="13_jneud"]
 [ext_resource type="PackedScene" uid="uid://dsh50qsil0dbi" path="res://Scenes/Slider/volume_slider.tscn" id="14_3lb8m"]
+[ext_resource type="Texture2D" uid="uid://dufpdfd0sbtt" path="res://Modules/Assets/Art/Menu/BaldoLogo.png" id="14_iimls"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_plgur"]
 animations = [{
@@ -185,12 +186,18 @@ theme_override_constants/margin_right = 210
 layout_mode = 2
 theme_override_constants/separation = 8
 
+[node name="Logo" type="Sprite2D" parent="MarginContainer/Menu"]
+position = Vector2(96, 48)
+scale = Vector2(3, 3)
+texture = ExtResource("14_iimls")
+
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/Menu"]
 layout_mode = 2
-theme_override_constants/separation = 15
+theme_override_constants/separation = 80
 theme_override_styles/separator = SubResource("StyleBoxEmpty_5yiqy")
 
 [node name="GameName" type="Label" parent="MarginContainer/Menu"]
+visible = false
 layout_mode = 2
 theme = SubResource("Theme_v6u2g")
 theme_type_variation = &"HeaderLarge"

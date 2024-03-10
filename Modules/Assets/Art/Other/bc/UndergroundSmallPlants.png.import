@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb2xpytypf863"
-path="res://.godot/imported/WeirdMushroom.png-fa8a8313c41fd3ad9d1d4c6a0586c81a.ctex"
+uid="uid://dmr3ggavnm4pa"
+path="res://.godot/imported/UndergroundSmallPlants.png-579c351d3533d00ab3a5dc62226152f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Modules/Assets/Art/Other/bc/WeirdMushroom.png"
-dest_files=["res://.godot/imported/WeirdMushroom.png-fa8a8313c41fd3ad9d1d4c6a0586c81a.ctex"]
+source_file="res://Modules/Assets/Art/Other/bc/UndergroundSmallPlants.png"
+dest_files=["res://.godot/imported/UndergroundSmallPlants.png-579c351d3533d00ab3a5dc62226152f4.ctex"]
 
 [params]
 

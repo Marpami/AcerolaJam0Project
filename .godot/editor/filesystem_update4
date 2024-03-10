@@ -5,7 +5,5 @@ res://Modules/Assets/Player/BalloonController/balloon_controller.tscn
 res://Scenes/MainMenu/main_menu.tscn
 res://Scenes/Global/music/audio_player.tscn
 res://Scenes/Slider/volume_slider.tscn
-res://Scenes/WaterDropSpawner/water_drop.gd
 res://Scenes/WaterDropSpawner/water_drop.tscn
 res://Scenes/WaterDropSpawner/water_drop_spawner.tscn
-res://Scenes/WaterDropSpawner/water_drop_spawner.gd

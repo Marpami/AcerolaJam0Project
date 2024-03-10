@@ -84,7 +84,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eqshp"]
 radius = 4.0
-height = 12.0
+height = 14.0
 
 [node name="Dog" type="RigidBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_romhi")
@@ -98,11 +98,11 @@ script = ExtResource("1_r67ek")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ji5p2")
-animation = &"death"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 4)
+position = Vector2(0, 4)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_eqshp")
 
