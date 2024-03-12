@@ -18,4 +18,4 @@ But if you don't want to then well you do you.
 
 
 Project made by:
-Marpami
+Marpami (from: Pixle Van Gogh)
