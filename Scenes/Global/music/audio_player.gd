@@ -1,7 +1,7 @@
 extends AudioStreamPlayer
 
 
-const level_music = preload("res://Modules/Assets/music/BalloonDogTheme.wav")
+const level_music = preload("res://Modules/Assets/music/BaldoThemeSong.wav")
 const menu_music = preload("res://Modules/Assets/music/BalloonDogThemeMenu.wav")
 
 
@@ -23,6 +23,9 @@ func play_music_level():
 
 func play_music_menu():
 	_play_music(menu_music)
+
+func _stop_music():
+	stream = null
 
 func _on_finished():
 	play()

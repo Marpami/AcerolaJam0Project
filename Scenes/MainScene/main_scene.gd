@@ -5,6 +5,7 @@ extends Node2D
 @onready var timer_label = $CanvasLayer/TimerContainer/TimerLabel
 @onready var timer_victory_label = $CanvasLayer/VictoryContainer/Margin/VBoxContainer/VictoryTimeLabel
 
+@onready var sfx_player = $SfxPlayer
 
 
 var game_over : bool = false
@@ -104,6 +105,8 @@ func _on_victory_area_body_entered(body):
 		return
 	if body.name == "Dog":
 		print("Victory")
+		AudioPlayer._stop_music()
+		sfx_player._victory()
 		victory_screen.visible = true
 		get_tree().paused = true
 

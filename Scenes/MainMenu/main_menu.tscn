@@ -136,7 +136,7 @@ font_names = PackedStringArray("Ink Free")
 
 [sub_resource type="Theme" id="Theme_7ggfm"]
 default_font = SubResource("SystemFont_m2wgf")
-default_font_size = 24
+default_font_size = 16
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -252,19 +252,19 @@ layout_mode = 2
 
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/Settings"]
 layout_mode = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 15
 theme_override_styles/separator = SubResource("StyleBoxEmpty_6bj81")
 
-[node name="Master" type="Label" parent="MarginContainer/Settings"]
+[node name="Settings" type="Label" parent="MarginContainer/Settings"]
 layout_mode = 2
 theme = SubResource("Theme_7ggfm")
 theme_override_colors/font_color = Color(0.615686, 0.556863, 0.368627, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 1
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 28
 text = "Sound Settings"
 
-[node name="Master2" type="Label" parent="MarginContainer/Settings"]
+[node name="Master" type="Label" parent="MarginContainer/Settings"]
 layout_mode = 2
 theme = SubResource("Theme_7ggfm")
 text = "Master"
