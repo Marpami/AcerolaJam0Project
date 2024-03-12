@@ -1,10 +1,17 @@
-This project if for the game jam Acerola Jam 0
+This project is for the game jam Acerola Jam 0
 
-Game can be found in Itch.io once it is done.
-Link to the finished game will be added later.
+Baldo can be found on Itch.io
+Link to the finished game: https://pixle-van-gogh.itch.io/baldo
+
+The game was made in 2 weeks for the Game Jam.
+I worked for 10 days and each day I spent about 4-6 hours working on the project.
+About 4 days I spent programming and the rest of the time was spent on making the art, music, sound effects, and setting up the website.
+So none of the assets are downloaded but made by me.
+
 
 Feel free to do what you want with this project I only hope that you would at least give me some credits.
-But if you don't want to then no need.
+But if you don't want to then well you do you.
+
 
 Project made by:
 Marpami
