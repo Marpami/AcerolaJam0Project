@@ -11,6 +11,7 @@ The first day was spent planning.
 About 4 days I spent programming and the rest of the time was spent on making the art, music, sound effects, and setting up the website.
 So none of the assets are downloaded but made by me.
 
+Project made by Godot. License: https://godotengine.org/license/
 
 Feel free to do what you want with this project I only hope that you would at least give me some credits.
 But if you don't want to then well you do you.
